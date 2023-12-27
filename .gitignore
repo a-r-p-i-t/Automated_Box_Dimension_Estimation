@@ -1,0 +1,4 @@
+/save_txt/*
+/saved_masks/*
+/saved_masks1/*
+*.pt
