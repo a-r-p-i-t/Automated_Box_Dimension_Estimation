@@ -8,9 +8,6 @@ import time
 from ultralytics import YOLO
 from mobile_sam import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
 
-# New Import
-from sam_filter import SAM_FILTER
-
 
 
 def infer(model,image_path):
@@ -104,9 +101,9 @@ def find_quadrilateral_center_and_points(box_set1, distance_ratio=0.4):
     return quadrilateral_center, point_on_line1, point_on_line2, point_on_line3, point_on_line4
 
 
-image_dir = "/Users/uditanshusatpathy/Downloads/Neophyte/neoMetry/crop_images/"#1703332928.907184"
-image_files = glob.glob(image_dir +"/*.jpg")
-# image_files = [image_dir +".jpg"]
+image_dir = "/Users/uditanshusatpathy/Downloads/Neophyte/neoMetry/crop_images/1703332928.907184"
+# image_files = glob.glob(image_dir +".jpg")
+image_files = [image_dir +".jpg"]
 save_folder= './save_txt/'
 sam_checkpoint = "/Users/uditanshusatpathy/Downloads/Neophyte/neoMetry/neometry/mobile_sam.pt"
 model_path = "best.pt"
@@ -180,22 +177,7 @@ for image_file in image_files:
     
     area_index = area_list.index(max(area_list))
     normalized_points = normalize_points(contour[area_index], img_width, img_height)
-
-    # Changed Section
-
-    yolo_seg_points = np.array([(int(x * img_width), int(y * img_height)) for x, y in zip(seg_list[::2], seg_list[1::2])], dtype=np.int32)
-    yolo_sam_iou = SAM_FILTER().calculate_iou(yolo_seg_points, normalized_points)
-
-    if yolo_sam_iou < 0.8:
-        result_points = yolo_seg_points
-    else:
-        result_points = normalized_points
-
-    label_string = convert_contour_to_yolov8(result_points, class_index=0)
-
-
-    #  Old Code
-    
+    label_string = convert_contour_to_yolov8(normalized_points, class_index=0)
     label_string_list.append(label_string)
     process_end_time = time.time()
     process_fps = 1/(process_end_time-process_strt_time)
