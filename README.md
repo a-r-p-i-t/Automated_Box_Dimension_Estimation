@@ -27,10 +27,11 @@ This repository contains the code for a project focused on segmenting Flipkart b
 
 ![1703332856 7339106](https://github.com/a-r-p-i-t/neometry/assets/99071325/6c871434-9c84-4937-8348-b2c3a97ad718)
 ![1703333423 5605545](https://github.com/a-r-p-i-t/neometry/assets/99071325/298e42f8-8bc0-45cf-8509-601d80c6c962)
+
 ## Acknowledgments
 
 1. YOLOv8: https://github.com/ultralytics/ultralytics
-2. SAM: https://github.com/dingmyu/Self-Attention-Guided-Image-Editing
+2. Mobile-SAM: https://github.com/ChaoningZhang/MobileSAM
    
 
 
