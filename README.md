@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the code for a project focused on segmenting Flipkart boxes using YOLOv8 with Self-Attention Mechanism (SAM) integration. The goal is to precisely predict masks for the boxes and further refine the segmentation using SAM to accurately calculate the length and width of the boxes.
+This repository contains the code for a project focused on segmenting Flipkart boxes using YOLOv8 with Segment Anything Model (SAM) integration. The goal is to precisely predict masks for the boxes and further refine the segmentation using SAM to accurately calculate the length and width of the boxes.
 
 ## Installation
 1. Clone the repository:
