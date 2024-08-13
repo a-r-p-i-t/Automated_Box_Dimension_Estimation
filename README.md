@@ -1,13 +1,13 @@
-# Flipkart Box Segmentation with YOLOv8 and SAM Integration
+# Automated Box Dimension Prediction with YOLOv8 and SAM Integration
 
 ## Overview
 
-This repository contains the code for a project focused on segmenting Flipkart boxes using YOLOv8 with Segment Anything Model (SAM) integration. The goal is to precisely predict masks for the boxes and further refine the segmentation using SAM to accurately calculate the length and width of the boxes.
+This repository contains the code for a project focused on segmenting boxes using YOLOv8 with Segment Anything Model (SAM) integration. The goal is to precisely predict masks for the boxes and further refine the segmentation using SAM to accurately calculate the length and width of the boxes.
 
 ## Installation
 1. Clone the repository:
 
-   git clone https://github.com/your-username/flipkart-box-segmentation.git
+   git clone https://github.com/your-username/Automated_Box Dimension_Estimation.git
 
 2. Install dependencies:
 
