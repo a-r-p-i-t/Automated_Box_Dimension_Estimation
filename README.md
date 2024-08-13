@@ -7,7 +7,7 @@ This repository contains the code for a project focused on segmenting boxes usin
 ## Installation
 1. Clone the repository:
 
-   git clone https://github.com/your-username/Automated_Box_Dimension_Estimation.git
+   git clone https://github.com/a-r-p-i-t/Automated_Box_Dimension_Estimation.git
 
 2. Install dependencies:
 
