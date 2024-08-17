@@ -40,7 +40,7 @@ This project focuses on accurately predicting the dimensions (length, breadth, a
 
 4. Run **[main.py](./main.py)** to generate masks over the top box top surface via mobile SAM Model.
 
-5. Run **[pixel_mm.py](./pixel_mm.py)** to convert pixel coordinates from the segmentation mask into real-world measurements.
+5. Run **[pixel_to_mm.py](./pixel_to_mm.py)** to convert pixel coordinates from the segmentation mask into real-world measurements.
 
 6. Review the generated Excel sheet to compare predicted dimensions against ground truth measurements.
 
